@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB Royal Studio | Barber Shop Nitra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #161616;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-color: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* HEADER / NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(13, 13, 13, 0.95);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--gold);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* SERVICES / PRICING */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 50px;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            nav a {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HLAVIČKA -->
+    <header>
+        <div class="logo">JB ROYAL STUDIO</div>
+        <nav>
+            <a href="#o-nas">O nás</a>
+            <a href="#sluzby">Služby</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- HERO SEKCIA -->
+    <section class="hero">
+        <h1>JB ROYAL STUDIO</h1>
+<p>Kráľovská starostlivosť o tvoj vzhľad v Nitre</p>
+        <a href="#kontakt" class="btn">Rezervovať termín</a>
+    </section>
+
+    <!-- O NÁS -->
+    <section id="o-nas">
+        <h2 class="section-title">O nás</h2>
+        <div class="about-content">
+            <p>Vitaj v JB Royal Studio – mieste, kde sa tradícia stretáva s moderným štýlom. Ponúkame ti špičkové strihy, precíznu úpravu brady a kráľovský servis, vďaka ktorému sa budeš vždy cítiť sebavedomo a sviežo.</p>
+        </div>
+    </section>
+
+    <!-- SLUŽBY A CENY -->
+    <section id="sluzby">
+        <h2 class="section-title">Služby & Cenník</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Pánsky strih</h3>
+                <p>Klasický alebo moderný strih podľa tvojho želania, vrátane stylingového prípravku.</p>
+                <div class="price">15 €</div>
+            </div>
+            <div class="service-card">
+                <h3>Úprava brady</h3>
+                <p>Zastrihnutie, kontúrovanie brizvou, aplikácia oleja a starostlivosť o fúzy.</p>
+                <div class="price">12 €</div>
+            </div>
+            <div class="service-card">
+                <h3>Kráľovský balík</h3>
+                <p>Kompletný strih vlasov + kompletná úprava brady + teplý uterák a osvieženie.</p>
+                <div class="price">25 €</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+        <h2 class="section-title">Kontakt & Otváracie hodiny</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Kde nás nájdeš</h3>
+                <p><strong>Mesto:</strong> Nitra, Slovensko</p>
+                <p><strong>Telefon / WhatsApp:</strong> +421 900 000 000</p>
+                <p><strong>Instagram:</strong> @jbroyalstudio</p>
+            </div>
+            <div class="contact-info">
+                <h3>Otváracie hodiny</h3>
+                <p><strong>Pondelok – Piatok:</strong> 09:00 – 18:00</p>
+                <p><strong>Sobota:</strong> 09:00 – 14:00</p>
+                <p><strong>Nedeľa:</strong> Zatvorené</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÄTIČKA -->
+    <footer>
+        <p>&copy; 2026 JB Royal Studio Nitra. Všetky práva vyhradené.</p>
+    </footer>
+
+</body>
+</html>
